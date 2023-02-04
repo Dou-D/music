@@ -1,0 +1,205 @@
+/* 顶部黑色 */
+.top {
+    height: 70px;
+    background-color: #242424;
+}
+/* 内容居中 */
+.top .topbar {
+    display: flex;
+    width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+/* 网页logo */
+.top .topbar .logo a {
+    display: block;
+    width: 157px;
+    line-height: 70px;
+    padding-right: 20px;
+    text-indent: -9999px;
+    background-image: url("../images/topbar1.png");
+    background-position: 0 0;
+}
+/* 中间6项工具栏 */
+.top .topbar .bar {
+    display: flex;
+}
+/* 各个item的设置 */
+
+.top .topbar .bar .item {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 69px;
+    padding: 0 19px;
+    color: #787878;
+    font-size: 14px;
+}
+/* 鼠标放上去变色 */
+.top .topbar .bar .item:hover,
+.top .topbar .bar .item.active {
+    background-color: black;
+    color: #fff;
+}
+/* 利用伪元素写红色小三角 */
+.top .topbar .bar .active::after {
+    /* content非常重要,一定记着不要忘记写 */
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    bottom: 0;
+    /* <!!重要 水平居中*/
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* !!>> */
+    background-image: url("../images/topbar1.png");
+    background-position: -226px 0;
+}
+/* hot图标 */
+.top .topbar .bar .hot {
+    position: absolute;
+    width: 28px;
+    height: 19px;
+    top: 21px;
+    left: 100px;
+    background-image: url("../images/topbar1.png");
+    background-position: -190px 0;
+}
+/* hot并未放在a中,而item设置relative,li并未设置,没有hot-father,hot会相对视图做绝对定位 */
+.hot-father {
+    position: relative;
+}
+/*  */
+.top .topbar .rightbar .search {
+    position: relative;
+    width: 158px;
+    height: 32px;
+    margin-top: 19px;
+    background-color: #fff;
+    background-image: url("../images/topbar1.png");
+    background-position: -99px 0;
+    border-radius: 20px;
+}
+.top .topbar .rightbar .search input {
+    display: block;
+    position: absolute;
+    height: 32px;
+    line-height: 32px;
+    top: 0;
+    left: 0;
+    width: 90%;
+
+}
+
+.top .topbar .rightbar {
+    display: flex;
+}
+
+.top .topbar .rightbar .login a {
+    display: block;
+    line-height: 69px;
+    color: #787878;
+}
+
+.top .topbar .rightbar .login a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.top .topbar .right {
+    display: flex;
+    align-items: center;
+}
+.top .topbar .right .search {
+    display: flex;
+    align-items: center;
+    width: 158px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 30px;
+    background: #fff url("../images/topbar1.png") 0 -99px;
+    border-radius: 32px;
+}
+.top .topbar .right .search input {
+    width: 120px;
+    margin-left: 28px;
+    
+}
+.top .topbar .right .anthor a {
+    display: inline-block;
+    width: 90px;
+    height: 32px;
+    margin: 0 18px;
+    color: #ccc;
+    border: 1px solid #4f4f4f;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 32px;
+}
+
+.top .topbar .right .anthor a:hover {
+    color: #fff;
+    border-color: #fff;
+    
+}
+.top .topbar .right .login {
+    /* margin-top: 19px; */
+    margin-left: 20px;
+    padding-right: 22px;
+}
+.top .topbar .right .login a {
+    display: block;
+    /* margin-top: 7px; */
+
+    color: #787878;
+}
+/* 注意这里不要写成.login a:hover */
+.top .topbar .right .login:hover a {
+    color: #666;
+}
+
+.top .topbar .right .login a:hover  {
+    color: #787878;
+    text-decoration: underline;
+}
+/* topbar部分结束 */
+/* nav部分 */
+.bottom {
+    height: 35px;
+    line-height: 35px;
+    background-color: #c20c0c;
+    box-sizing: border-box;
+    border-bottom: 1px solid #a40011;
+}
+.bottom .nav {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+    /* background-color: pink; */
+    box-sizing: border-box;
+    padding-left: 180px;
+}
+.bottom .nav .item a {
+    display: inline-block;
+}
+.bottom .nav .item a span {
+    display: block;
+    color: #ccc;
+    padding: 0 13px;
+    margin: 7px 17px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 21px;
+}
+.bottom .nav .item a span:hover, 
+.bottom .nav .item.active a span {
+    background-color: rgba(0, 0, 0, .3);
+    
+}
+/* nav部分结束 */

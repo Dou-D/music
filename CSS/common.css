@@ -1,0 +1,12 @@
+.top {
+    margin: 0 auto;
+}
+* {
+    color: #000;
+}
+body {
+    font-size: 12px;
+}
+.bottom {
+    /* margin: 0 auto; */
+}
